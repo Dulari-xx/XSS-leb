@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Hint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hint for Solving the DOM XSS Lab</h1>
+    </header>
+    <main>
+        <h2>Hint:</h2>
+        <p>This lab has a DOM-based Cross-Site Scripting (XSS) vulnerability. To solve it, consider the following:</p>
+        <ul>
+            <li>Look at how the URL parameters are being handled by JavaScript on the page.</li>
+            <li>Try injecting a JavaScript payload into the URL by using a query parameter.</li>
+            <li>The vulnerable function here is <code>document.write()</code>, which is known to cause security risks when used with untrusted input.</li>
+            <li>Craft a payload that can be executed by this function when you control the URL parameters.</li>
+            <li>Example payload to try: <code>?input=&lt;script&gt;alert('XSS Attack!')&lt;/script&gt;</code></li>
+        </ul>
+        <h3>Extra Tip:</h3>
+        <p>Make sure to check the instructions on how to manipulate the URL parameters to inject your script.</p>
+    </main>
+    <footer>
+        <p><a href="index.php">Back to Lab</a></p>
+    </footer>
+</body>
+</html>
